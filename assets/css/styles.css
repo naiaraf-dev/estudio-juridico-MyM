@@ -1,0 +1,349 @@
+:root {
+    --primary-color: #587997;
+    --secondary-color: #d9b87e;
+    --accent-color: #c8a25c;
+    --text-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --neutral-light: #f5f5f5;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    padding-top: 87px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background-color: var(--primary-color) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+/* Subrayado animado (excepto en el botón) */
+.navbar-nav .nav-link {
+    position: relative;
+    overflow: hidden;
+    color: var(--text-light) !important;
+    margin: 0 1rem;
+}
+
+/* Línea inicial */
+.navbar-nav .nav-link:not(.btn-nav-highlight)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0%;
+    height: 2px;
+    background-color: #d9b87e;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover */
+.navbar-nav .nav-link:not(.btn-nav-highlight):hover::after {
+    width: 100%;
+}
+
+/* Botón destacado */
+.btn-nav-highlight {
+    color: white !important;
+    padding: 8px 18px;
+    border: 2px solid white !important;
+    border-radius: 25px;
+    margin-left: 10px;
+    font-weight: 600;
+    transition: 0.3s all ease;
+}
+
+.btn-nav-highlight:hover {
+    background-color: white;
+    border-color: white;
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+/* ================= HERO ================= */
+.hero {
+    background: url('/assets/img/trabajando3-collage.jpg') center/cover;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    margin-top: -11px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.1rem;
+}
+
+/* ================= SECTIONS ================= */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+    font-size: 2.4rem;
+}
+
+.section-title::after {
+    content: '';
+    width: 90px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    display: block;
+    margin: 1rem auto;
+}
+
+/* ================= ABOUT ================= */
+.about-section {
+    background-color: var(--neutral-light);
+}
+
+.lawyer-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.lawyer-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.matricula-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* ================= SERVICES ================= */
+.service-card {
+    padding: 2rem;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.service-card:hover {
+    background-color: var(--neutral-light);
+    transform: translateY(-4px);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.2rem;
+}
+
+/* ================= CONTACTO ================= */
+.contact-section {
+    background-color: var(--neutral-light);
+    width: 100%;
+    padding: 80px 0;
+}
+
+.contact-form {
+    background: white;
+    color: var(--text-dark);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    button {
+        background: #e0e0e0;
+    }
+
+    button:hover {
+        background: #a8a8a8;
+    }
+}
+
+.contact-form .form-control {
+    margin-bottom: 1rem;
+    padding: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+
+.contact-item i {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+
+.ig-link {
+    text-decoration: none;
+}
+
+/* WhatsApp buttons */
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.whatsapp-btn:hover {
+    background-color: #199c49;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.6rem 0;
+}
+
+/* Logo más chico */
+.footer-logo {
+    max-width: 220px;
+    height: auto;
+}
+
+/* Remover padding extra de columnas */
+.footer .col-md-2,
+.footer .col-md-7 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Reducir altura causada por márgenes */
+.footer-description {
+    margin: 0.25rem 0 !important;
+    opacity: 0.9;
+}
+
+.footer-legal {
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0 0 !important;
+    opacity: 0.7;
+}
+
+/* Alineación */
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left img {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+/* Resto igual */
+.footer-right h5 {
+    margin-bottom: 0.3rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.footer-links li {
+    margin: 2px 0;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Redes sociales */
+.footer-social a {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 12px;
+}
+
+.footer-social-vertical a {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+
+.footer-social-vertical a:hover {
+    color: white;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center; /* CENTRA VERTICALMENTE LAS 3 COLUMNAS */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.4rem; }
+    .hero p { font-size: 1rem; }
+    .footer-left {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .footer-center {
+        text-align: center;
+    }
+}
