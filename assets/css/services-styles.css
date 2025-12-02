@@ -1,0 +1,154 @@
+/* ================= SERVICES PAGE STYLES ================= */
+
+.hero-services {
+    background: linear-gradient(rgba(88, 121, 151, 0.8), rgba(88, 121, 151, 0.8)),
+        url("/placeholder.svg?height=600&width=1200") center / cover;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    margin-top: -11px;
+}
+
+.hero-services h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-services p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* ================= SERVICES DETAIL ================= */
+.services-detail {
+    background-color: white;
+}
+
+.service-detail-card {
+    background: white;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--neutral-light);
+}
+
+.service-detail-card:last-child {
+    border-bottom: none;
+}
+
+.service-detail-icon {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.service-detail-card h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.service-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.service-features li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* ================= PROCESS SECTION ================= */
+.process-section {
+    background-color: var(--neutral-light);
+}
+
+.process-step {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(88, 121, 151, 0.15);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), rgba(88, 121, 151, 0.8));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.process-step h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.process-step p {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero-services h1 {
+        font-size: 2rem;
+    }
+
+    .hero-services p {
+        font-size: 1rem;
+    }
+
+    .service-detail-card {
+        padding: 2rem 0;
+    }
+
+    .service-detail-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-detail-icon {
+        font-size: 3rem;
+    }
+
+    .service-features li {
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
