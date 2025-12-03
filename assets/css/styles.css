@@ -322,7 +322,7 @@ h6 {
 
 .footer a:hover {
     text-decoration: none;
-    color: white !important;
+    color: var(--text-dark) !important;
     opacity: 1;
 }
 
@@ -413,14 +413,6 @@ h6 {
     gap: 0.4rem;
 }
 
-
-.footer-social-vertical a i {
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-    transition: color 0.3s ease;
-}
-
-
 .footer-social-vertical a:hover i {
     color: white !important;
 }
@@ -444,27 +436,52 @@ h6 {
 
 /* Texto del enlace: oscuro por defecto (no blanco) */
 .footer .footer-social-vertical a {
-    color: var(--text-dark) !important;       /* texto junto al icono */
+    color: white !important;       /* texto junto al icono */
     opacity: 0.85;
     transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-/* Icono: color oscuro por defecto (tu secundario) */
-.footer .footer-social-vertical a i {
-    color: var(--secondary-color) !important;
-    transition: color 0.25s ease;
-}
-
-/* Hover: texto e icono pasan a blanco */
+/* Hover: texto e icono pasan a oscuro */
 .footer .footer-social-vertical a:hover,
 .footer .footer-social-vertical a:focus {
-    color: white !important;    /* texto */
+    color: var(--text-dark) !important;    /* texto */
     opacity: 1;
 }
 
 .footer .footer-social-vertical a:hover i,
 .footer .footer-social-vertical a:focus i {
-    color: white !important;    /* icono */
+    color: var(--text-dark) !important;    /* icono */
+}
+
+.footer .footer-social-vertical a {
+    font-size: 1.1rem;
+}
+
+/* ================= Back to top Button ================= */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+#btn-back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* ================= RESPONSIVE ================= */

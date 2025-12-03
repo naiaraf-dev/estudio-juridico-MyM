@@ -1,9 +1,94 @@
 /* ================= SERVICES PAGE STYLES ================= */
 
+:root {
+    --primary-color: #587997;
+    --secondary-color: #d9b87e;
+    --accent-color: #c8a25c;
+    --text-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --neutral-light: #f5f5f5;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    padding-top: 87px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background-color: var(--primary-color) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    overflow: hidden;
+    color: var(--text-light) !important;
+    margin: 0 1rem;
+}
+
+.navbar-nav .nav-link:not(.btn-nav-highlight)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0%;
+    height: 2px;
+    background-color: #d9b87e;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:not(.btn-nav-highlight):hover::after {
+    width: 100%;
+}
+
+.btn-nav-highlight {
+    color: white !important;
+    padding: 8px 18px;
+    border: 2px solid white !important;
+    border-radius: 25px;
+    margin-left: 10px;
+    font-weight: 600;
+    transition: 0.3s all ease;
+}
+
+.btn-nav-highlight:hover {
+    background-color: white;
+    border-color: white;
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
 .hero-services {
-    background: linear-gradient(rgba(88, 121, 151, 0.8), rgba(88, 121, 151, 0.8)),
-        url("/placeholder.svg?height=600&width=1200") center / cover;
-    height: 45vh;
+    background: url("/assets/img/trabajando3-collage.jpg") center / cover;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,9 +166,16 @@
     font-size: 1.3rem;
 }
 
+.section-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+    margin: 4rem 0;
+}
+
 /* ================= PROCESS SECTION ================= */
 .process-section {
-    background-color: var(--neutral-light);
+    background-color: var(--text-light);
 }
 
 .process-step {
@@ -93,6 +185,7 @@
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    height: 100%;
 }
 
 .process-step:hover {
@@ -125,30 +218,257 @@
     margin: 0;
 }
 
+/* ================= CTA SECTION ================= */
+.cta-section .container {
+    background: var(--text-light);
+    color: var(--text-dark);
+    margin-top: -20px;
+    margin-bottom: 40px;
+    padding: 4rem 2rem;
+    text-align: center;
+    }
+
+.cta-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.btn-contact-highlight {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-contact-highlight:hover {
+    background-color: #d9b87e !important;
+    color: white !important;
+    transform: translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 2.5rem 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--text-light);
+    opacity: 0.85;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: var(--text-dark) !important;
+    opacity: 1;
+}
+
+/* Footer row alineado verticalmente al mismo nivel */
+.footer-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Logo a la izquierda - más grande */
+.footer-logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Sección central con copyright */
+.footer-center-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-description {
+    margin: 0;
+    opacity: 0.95;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0.8rem 0;
+}
+
+.footer-legal {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Sección derecha con links y redes - 2 columnas */
+.footer-right-section {
+    display: flex;
+    align-items: left;
+}
+
+.footer-right-section h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.6rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 0.35rem 0;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    opacity: 0.85;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Redes sociales verticales con iconos y texto */
+.footer-social-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-social-vertical a:hover i {
+    color: white !important;
+}
+
+.footer-social-vertical a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    opacity: 0.85;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-social-vertical a:hover {
+    opacity: 1;
+    color: white !important;
+}
+
+/* ===== Footer: redes sociales - estado normal y hover ===== */
+
+/* Texto del enlace: blanco por defecto */
+.footer .footer-social-vertical a {
+    color: white !important;       /* texto junto al icono */
+    opacity: 0.85;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+/* Hover: texto e icono pasan a oscuro */
+.footer .footer-social-vertical a:hover,
+.footer .footer-social-vertical a:focus {
+    color: var(--text-dark) !important;    /* texto */
+    opacity: 1;
+}
+
+.footer .footer-social-vertical a:hover i,
+.footer .footer-social-vertical a:focus i {
+    color: var(--text-dark) !important;    /* icono */
+}
+
+.footer .footer-social-vertical a {
+    font-size: 1.1rem;
+}
+
+/* ================= Back to top Button ================= */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+#btn-back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-    .hero-services h1 {
+    .hero-about h1 {
         font-size: 2rem;
     }
 
-    .hero-services p {
+    .hero-about p {
         font-size: 1rem;
     }
 
-    .service-detail-card {
-        padding: 2rem 0;
+    .lawyer-detail-title {
+        font-size: 1.8rem;
+        margin-top: 2rem;
     }
 
-    .service-detail-card h2 {
+    .lawyer-jurisdiction {
+        font-size: 0.95rem;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .btn-whatsapp,
+    .btn-email {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-section h2 {
         font-size: 1.8rem;
     }
 
-    .service-detail-icon {
-        font-size: 3rem;
-    }
-
-    .service-features li {
-        padding-left: 1.5rem;
-        font-size: 0.9rem;
+    .cta-section p {
+        font-size: 1rem;
     }
 }
