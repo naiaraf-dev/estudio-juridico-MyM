@@ -137,11 +137,11 @@ h6 {
     margin-bottom: 0.5rem;
 }
 
-.lawyer-jurisdiction {
+/* .lawyer-jurisdiction {
     color: var(--secondary-color);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-}
+} */
 
 .lawyer-detail-content {
     padding: 0;
@@ -169,7 +169,7 @@ h6 {
     content: "✓";
     position: absolute;
     left: 0;
-    color: var(--secondary-color);
+    color: #404040;
     font-weight: bold;
 }
 
@@ -222,7 +222,7 @@ h6 {
 }
 
 .btn-email {
-    background-color: var(--secondary-color);
+    background-color: #404040;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -244,7 +244,7 @@ h6 {
 .section-divider {
     border: none;
     height: 2px;
-    background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+    background: linear-gradient(to right, transparent, #404040, transparent);
     margin: 4rem 0;
 }
 
@@ -272,7 +272,7 @@ h6 {
 
 .value-icon {
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: #404040;
     margin-bottom: 1rem;
 }
 
@@ -398,12 +398,12 @@ h6 {
     align-items: center;
 }
 
-.footer-right-section h5 {
+/* .footer-right-section h5 {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 0.6rem;
-}
+} */
 
 .footer-links {
     list-style: none;

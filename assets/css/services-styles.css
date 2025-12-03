@@ -126,7 +126,7 @@ h6 {
 
 .service-detail-icon {
     font-size: 4rem;
-    color: var(--secondary-color);
+    color: #404040;
     margin-bottom: 1rem;
 }
 
@@ -161,7 +161,7 @@ h6 {
     content: "→";
     position: absolute;
     left: 0;
-    color: var(--secondary-color);
+    color: #404040;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -169,7 +169,7 @@ h6 {
 .section-divider {
     border: none;
     height: 2px;
-    background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+    background: linear-gradient(to right, transparent, #404040, transparent);
     margin: 4rem 0;
 }
 
@@ -330,12 +330,12 @@ h6 {
     align-items: left;
 }
 
-.footer-right-section h5 {
+/* .footer-right-section h5 {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 0.6rem;
-}
+} */
 
 .footer-links {
     list-style: none;
