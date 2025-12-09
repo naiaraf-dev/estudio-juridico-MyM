@@ -486,6 +486,9 @@ h6 {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
+
+    /* ========== NAVBAR ========== */
+
     body {
         padding-top: 0 !important;
     }
@@ -494,12 +497,10 @@ h6 {
         padding-bottom: 0 !important;
     }
 
-    /* Empuja el logo */
     .navbar-brand {
         padding-left: 0.8rem;
     }
 
-    /* Empuja el botón burger */
     .navbar-toggler {
         margin-right: 0.8rem;
     }
@@ -508,13 +509,11 @@ h6 {
         align-items: flex-start !important;
     }
 
-    /* Fondo al menú desplegado */
     .navbar-collapse {
         background-color: #f2f2f2 !important;
         padding: 1rem 0;
     }
 
-    /* Links más espaciados y en columna */
     .navbar-nav .nav-link {
         margin: 0.5rem 0;
         text-align: left;
@@ -523,11 +522,10 @@ h6 {
         font-weight: bold;
     }
 
-    /* Botón ocupa toda la línea */
     .btn-nav-highlight {
-        width: 100%;        /* ocupa toda la línea */
-        display: block;     /* se comporta como bloque */
-        text-align: center; /* centra el texto */
+        width: 100%;
+        display: block;
+        text-align: center;
         padding: 10px 18px;
         margin: 0.5rem 0;
     }
@@ -535,11 +533,10 @@ h6 {
     .navbar-nav .btn-nav-highlight {
         background-color: var(--primary-color) !important;
         color: #ffffff !important;
-        width: calc(100% - 2rem) !important; /* ocupa todo pero deja margen */
-        margin: 0.5rem 1rem !important;      /* separa de los costados */
+        width: calc(100% - 2rem) !important;
+        margin: 0.5rem 1rem !important;
+        padding: 10px 18px !important;
         text-align: center !important;
-        display: block !important;
-        padding: 10px 18px;
         border: none !important;
     }
 
@@ -553,21 +550,13 @@ h6 {
     }
 
     .navbar-nav .nav-item {
-        width: 100% !important; /* asegura que el li ocupe el ancho */
-        display: block !important; /* evita flex que rompe todo */
+        width: 100% !important;
     }
 
     .navbar .container {
         max-width: 100% !important;
         padding: 0 !important;
-        /* margin-bottom: -1.0rem !important; */
     }
-
-    /* .navbar-nav .nav-item .btn-nav-highlight {
-        width: auto !important;
-        display: inline-block !important;
-        margin: 0.5rem 0 0.5rem 0.5rem;
-    } */
 
     .service-card:hover,
     .lawyer-card:hover {
@@ -575,71 +564,93 @@ h6 {
         background-color: white !important;
     }
 
-    .footer-row {
-        flex-direction: column;
-        text-align: center;
+    /* ========== FOOTER EXACTO COMO LA IMAGEN ========== */
+
+    .footer {
+        text-align: center !important;
     }
 
-    .footer-right-section {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .footer .row {
-        text-align: center;
-    }
-
+    /* Logo centrado arriba */
     .footer-logo-section {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1rem;
-    }
-
-    /* Sección derecha apilada */
-    .footer .col-lg-9 {
+        display: flex !important;
         justify-content: center !important;
+        margin-bottom: 1.5rem !important;
     }
 
+    /* Contenedor principal → columnas centradas y lado a lado */
+    .footer .row {
+        display: flex !important;
+        flex-direction: column !important; /* Primero apila */
+        align-items: center !important;
+    }
+
+    /* Bloque que contiene Enlaces + Síguenos */
     .footer .col-lg-9 > div {
-        flex-direction: column;
-        gap: 2rem;
+        width: 100% !important;
+        max-width: 500px !important;
+
+        display: flex !important;
+        flex-direction: row !important;   
+        justify-content: center !important; /* <-- Se juntan al centro */
+        align-items: flex-start !important;
+
+        text-align: left !important;
+        gap: 1.5rem !important; /* <-- Más juntos */
     }
 
+    /* Listas */
+    .footer ul {
+        padding-left: 0 !important;
+    }
+
+    .footer ul li {
+        text-align: left !important;
+    }
+
+    /* Títulos */
+    .footer h5 {
+        text-align: left !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    /* Redes exactamente como la imagen */
     .footer-social-vertical {
-        align-items: left;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.8rem !important;
+    }
+
+    .footer-social-vertical a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
     }
 }
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 1.5rem 0;
-    }
-
     .footer-logo {
-        max-width: 150px;
-    }
-
-    .footer-right-section {
-        gap: 2rem;
+        max-width: 150px !important;
     }
 }
 
 @media (max-width: 576px) {
-    .footer-row {
-        gap: 1rem;
-    }
 
     .footer-logo {
-        max-width: 120px;
+        max-width: 130px !important;
+    }
+
+    .footer .col-lg-9 > div {
+        max-width: 420px !important;
+        gap: 1.2rem !important;
+    }
+
+    .footer-social-vertical a {
+        font-size: 0.95rem !important;
     }
 
     .footer-description,
     .footer-legal {
-        font-size: 0.8rem;
-    }
-
-    .footer-right-section {
-        flex-direction: column;
-        gap: 1.5rem;
+        font-size: 0.8rem !important;
     }
 }

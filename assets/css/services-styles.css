@@ -436,39 +436,228 @@ h6 {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .hero-about h1 {
-        font-size: 2rem;
+@media (max-width: 992px) {
+    /* ===== NAVBAR (idéntico al home) ===== */
+    body {
+        padding-top: 0 !important;
     }
 
-    .hero-about p {
-        font-size: 1rem;
+    .navbar {
+        padding-bottom: 0 !important;
     }
 
-    .lawyer-detail-title {
-        font-size: 1.8rem;
-        margin-top: 2rem;
+    .navbar-brand {
+        padding-left: 0.8rem;
     }
 
-    .lawyer-jurisdiction {
-        font-size: 0.95rem;
+    .navbar-toggler {
+        margin-right: 0.8rem;
     }
 
-    .contact-buttons {
-        flex-direction: column;
+    .navbar-nav {
+        align-items: flex-start !important;
     }
 
-    .btn-whatsapp,
-    .btn-email {
+    .navbar-collapse {
+        background-color: #f2f2f2 !important;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+        text-align: left;
+        padding-left: 0.5rem;
+        color: var(--primary-color) !important;
+        font-weight: bold;
+    }
+
+    .btn-nav-highlight {
         width: 100%;
+        display: block;
+        text-align: center;
+        padding: 10px 18px;
+        margin: 0.5rem 0;
+    }
+
+    .navbar-nav .btn-nav-highlight {
+        background-color: var(--primary-color) !important;
+        color: #fff !important;
+        width: calc(100% - 2rem) !important;
+        margin: 0.5rem 1rem !important;
+        text-align: center !important;
+        display: block !important;
+        border: none !important;
+    }
+
+    .navbar-nav .nav-link:not(.btn-nav-highlight)::after {
+        display: none !important;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .navbar .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .hero-services {
+        padding: 4rem 0 !important;
+        text-align: center;
+    }
+
+    .hero-services h1 {
+        font-size: 2.2rem !important;
+        line-height: 2.6rem;
+    }
+
+    .hero-services p {
+        font-size: 1rem !important;
+        margin-top: 0.5rem;
+    }
+
+    .services-detail .service-detail-card {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .service-detail-card h2 {
+        text-align: center !important;
+        margin-top: 1rem;
+        font-size: 1.8rem !important;
+    }
+
+    .service-description {
+        text-align: center;
+        font-size: 1rem !important;
+    }
+
+    .service-features {
+        padding-left: 1.2rem !important;
+        margin-top: 1rem;
+    }
+
+    .service-detail-icon {
+        font-size: 2.5rem !important;
+        display: flex;
         justify-content: center;
+        margin-bottom: 1rem !important;
+    }
+
+    .process-section .process-step {
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    .process-section .step-number {
+        margin: 0 auto 0.8rem auto !important;
     }
 
     .cta-section h2 {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
+        line-height: 2.2rem;
     }
 
     .cta-section p {
-        font-size: 1rem;
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer {
+        text-align: center !important;
+    }
+
+    /* Logo centrado arriba */
+    .footer-logo-section {
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Contenedor principal apilado */
+    .footer .row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Bloque Enlaces + Síguenos */
+    .footer .col-lg-9 > div {
+        width: 100% !important;
+        max-width: 500px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important; /* ← Esto junta ambas columnas */
+        align-items: flex-start !important;
+
+        text-align: left !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Listas */
+    .footer ul {
+        padding-left: 0 !important;
+    }
+
+    .footer ul li {
+        text-align: left !important;
+    }
+
+    /* Títulos */
+    .footer h5 {
+        text-align: left !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    /* Redes verticales */
+    .footer-social-vertical {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.8rem !important;
+    }
+
+    .footer-social-vertical a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+}
+
+/* ================= EXTRA MOBILE ================= */
+@media (max-width: 576px) {
+    .hero-services {
+        padding: 3rem 0 !important;
+    }
+
+    .hero-services h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .service-detail-card {
+        padding: 1.2rem !important;
+    }
+
+    .service-detail-icon {
+        font-size: 2.2rem !important;
+    }
+
+    .service-description,
+    .service-features li {
+        font-size: 0.95rem !important;
+    }
+
+    .process-section .process-step h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .process-section .process-step p {
+        font-size: 0.95rem !important;
+    }
+
+    .cta-section h2 {
+        font-size: 1.6rem !important;
     }
 }
