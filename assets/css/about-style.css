@@ -32,6 +32,17 @@ h6 {
     font-weight: 600;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ================= NAVBAR ================= */
 .navbar {
     background-color: var(--primary-color) !important;
@@ -88,8 +99,7 @@ h6 {
 }
 
 .hero-about {
-    background: 
-        url("/assets/img/trabajando3-collage.jpg") center / cover;
+    background: url("/assets/img/law-firm.png") center / cover no-repeat;
     height: 55vh;
     display: flex;
     align-items: center;
@@ -173,21 +183,53 @@ h6 {
     font-weight: bold;
 }
 
+/* Matrícula sola arriba */
 .lawyer-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.badge-item {
-    background-color: var(--primary-color);
-    color: white;
+/* WhatsApp + LinkedIn en fila */
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Email solo abajo */
+.email-row {
+    display: block;
+}
+
+/* Badges (ya estaban) */
+.badge-item,
+.badge-item-in {
     padding: 10px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.badge-item {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.badge-item-in {
+    background-color: #4296d6;
+}
+
+.badge-item-in:hover {
+    background-color: #2f7bb6;
+    transform: translateY(-2px);
+}
+
+.badge-item-in a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.03rem;
 }
 
 .contact-buttons {
@@ -250,24 +292,24 @@ h6 {
 
 /* ================= VALUES SECTION ================= */
 .values-section {
-    background-color: var(--text-light);
     /* padding-top: 20px; */
     padding-bottom: 40px;
 }
 
 .value-card {
-    background: white;
+    background: var(--neutral-light);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     height: 100%;
 }
 
 .value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(88, 121, 151, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(88, 121, 151, 0.18);
 }
 
 .value-icon {
@@ -418,7 +460,7 @@ h6 {
 .footer-links a {
     color: var(--text-light);
     opacity: 0.85;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .footer-links a:hover {

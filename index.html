@@ -60,7 +60,7 @@
 
                 <!-- CARD 1 -->
                 <div class="col-lg-6 mb-4">
-                    <div class="lawyer-card">
+                    <div class="lawyer-card reveal">
                         <div class="lawyer-photo"><i class="fas fa-user"></i></div>
                         <h3 class="lawyer-name">Dra. Florencia Montoya</h3>
                         <p>Profesional dedicada a la resolución ágil y efectiva de conflictos en el ámbito jurídico bonaerense.</p>
@@ -71,9 +71,9 @@
 
                 <!-- CARD 2 -->
                 <div class="col-lg-6 mb-4">
-                    <div class="lawyer-card">
+                    <div class="lawyer-card reveal">
                         <div class="lawyer-photo">
-                            <img src="assets/img/foto_morales.png" alt="Foto de la Dra. Morales">
+                            <img src="assets/img/dra.morales_inicio.jpg" alt="Foto de la Dra. Morales">
                         </div>
                         <h3 class="lawyer-name">Dra. Celeste Morales López</h3>
                         <p>Profesional dedicada a ofrecer soluciones jurídicas prácticas y eficientes en la Ciudad Autónoma de Buenos Aires.</p>
@@ -81,23 +81,22 @@
                         <!-- <a href="./pages/about.html" class="btn btn-sm btn-custom mt-3">Ver Perfil Completo</a> -->
                     </div>
                 </div>
-
             </div>
 
-            <div class="row mt-4">
+            <!-- <div class="row mt-4">
                 <div class="col-12">
                     <div class="alert alert-info text-center">
                         <i class="fas fa-info-circle"></i>
                         <strong>Cobertura completa:</strong> Atención en CABA y Provincia de Buenos Aires.
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section>
     
     <!-- ================= SERVICES ================= -->
-    <section id="services" class="services-section section-padding">
+    <section id="services" class="services-section section-padding reveal">
         <div class="container">
             <h2 class="section-title">Áreas de Práctica</h2>
 
@@ -105,41 +104,49 @@
                 <!-- Service items -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
-                        <h3 class="service-title">Derecho Civil</h3>
-                        <p>Contratos, daños y perjuicios, responsabilidad civil.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-briefcase"></i></div>
-                        <h3 class="service-title">Derecho Laboral</h3>
-                        <p>Despidos, indemnizaciones y defensa del trabajador.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-home"></i></div>
+                        <div class="service-icon">
+                            <img src="assets/img/family-home-household-family-single-family-home-svgrepo-com.svg" alt="house-family-icon">
+                        </div>
                         <h3 class="service-title">Derecho de Familia</h3>
-                        <p>Divorcios, visitas, cuota alimentaria.</p>
+                        <p>Divorcio, cuidado personal, alimentos y soluciones integrales para conflictos familiares.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-file-contract"></i></div>
-                        <h3 class="service-title">Contratos y Testamentarías</h3>
-                        <p>Testamentos, herencias, planificación patrimonial.</p>
+                        <div class="service-icon">
+                            <img src="assets/img/signing-the-contract-svgrepo-com.svg" alt="contract-icon">
+                        </div>
+                        <h3 class="service-title">Contratos</h3>
+                        <p>Redacción, revisión y resolución de contratos civiles y comerciales.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/img/diploma-contract-svgrepo-com (1).svg" alt="diploma-contract-icon">
+                        </div>
+                        <h3 class="service-title">Sucesiones</h3>
+                        <p>Tramitación sucesoria, declaratoria de herederos y planificación patrimonial.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="assets/img/gavel-svgrepo-com.svg" alt="gavel-icon">
+                        </div>
+                        <h3 class="service-title">Derecho Penal</h3>
+                        <p>Defensas penales, excarcelaciones y representación del particular damnificado.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fas fa-building"></i></div>
-                        <h3 class="service-title">Derecho Comercial</h3>
-                        <p>Asesoramiento comercial y sociedades.</p>
+                        <h3 class="service-title">Derechos Reales</h3>
+                        <p>Propiedad, posesión, usucapión y conflictos sobre bienes inmuebles.</p>
                     </div>
                 </div>
 
@@ -155,7 +162,7 @@
     </section>
 
     <!-- ================= CONTACTO ================= -->
-    <section id="contact" class="contact-section section-padding">
+    <section id="contact" class="contact-section section-padding reveal">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
 
@@ -167,16 +174,16 @@
                         <h3 class="mb-4" style="color: var(--primary-color);">Envíanos tu consulta</h3>
 
                         <form id="contactForm">
-                            <input type="text" class="form-control" placeholder="Nombre completo" required>
-                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input name="name" type="text" class="form-control" placeholder="Nombre completo" required>
+                            <input name="email" type="email" class="form-control" placeholder="Email" required>
 
-                            <select class="form-control" required>
+                            <select name="jurisdiction" class="form-control" required>
                                 <option value="">Seleccione la jurisdicción</option>
                                 <option value="caba">CABA</option>
                                 <option value="pba">PBA</option>
                             </select>
 
-                            <textarea class="form-control" rows="5" placeholder="Describa su consulta" required></textarea>
+                            <textarea name="message" class="form-control" rows="5" placeholder="Describa su consulta" required></textarea>
 
                             <button type="submit" class="btn btn-custom w-100">Enviar Consulta</button>
                         </form>
@@ -258,23 +265,18 @@
                             <h5>Síguenos</h5>
                             <div class="footer-social-vertical">
 
-                                <a href="https://www.linkedin.com/in/florencia-montoya" 
-                                target="_blank" title="LinkedIn Montoya">
-                                    <i class="fab fa-linkedin"></i> Montoya
-                                </a>
-
-                                <a href="https://www.linkedin.com/in/celeste-morales" 
-                                target="_blank" title="LinkedIn Morales">
-                                    <i class="fab fa-linkedin"></i> Morales
-                                </a>
+                                <!-- <a href="https://www.facebook.com/estudiojuridicomontoyamorales" 
+                                target="_blank" title="Facebook">
+                                    <i class="fab fa-facebook"></i> Estudio Jurídico M&M
+                                </a> -->
 
                                 <a href="https://www.instagram.com/estudiojuridicomontoyamorales"
                                 target="_blank" title="Instagram">
-                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-instagram"></i> Instagram
                                 </a>
 
                                 <a href="mailto:montoyamoralesabogadas@gmail.com" title="Email">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="fas fa-envelope"></i> Email
                                 </a>
 
                             </div>
@@ -300,6 +302,9 @@
         </div>
     </footer>
 
+    <!-- Contenedor de Toasts -->
+    <div id="toast-container"></div>
+    
     <!-- Back to top button -->
     <a href="#" id="btn-back-to-top">
         <i class="fa-solid fa-chevron-up"></i>

@@ -48,31 +48,122 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* =========================================
-    HOME PAGE (index.html)
-    Solo corre si existe el formulario
+    TOAST SYSTEM (front-end puro)
 ========================================= */
 
-// Formulario de contacto (solo en INICIO)
-const contactForm = document.getElementById('contactForm');
+function showToast(message, type = "success") {
+    const container = document.getElementById("toast-container");
+    if (!container) return;
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('¡Gracias por su consulta! Nos pondremos en contacto a la brevedad.');
-        this.reset();
-    });
+    const toast = document.createElement("div");
+    toast.className = "toast " + (type === "error" ? "error" : "");
+    toast.innerText = message;
+
+    container.appendChild(toast);
+
+    // Entrada
+    setTimeout(() => toast.classList.add("show"), 10);
+
+    // Salida y eliminación
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+    }, 3500);
 }
 
 
 /* =========================================
-    ABOUT y SERVICES - Animaciones
-    (solo si existen cards)
+    VALIDACIONES
 ========================================= */
 
-const animatedElements = document.querySelectorAll('.lawyer-card, .service-card');
+function validateName(name) {
+    const parts = name.trim().split(/\s+/);
+    return parts.length >= 2 && name.length >= 4;
+}
+
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+function validateJurisdiction(j) {
+    return j === "caba" || j === "pba";
+}
+
+function validateMessage(msg) {
+    return msg.trim().length >= 10;
+}
+
+
+/* =========================================
+    FORMULARIO DE CONTACTO
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const jurisdiction = form.jurisdiction.value.trim();
+        const message = form.message.value.trim();
+
+        // VALIDACIONES
+        if (!validateName(name)) {
+            showToast("Ingresá tu nombre completo.", "error");
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            showToast("Ingresá un email válido.", "error");
+            return;
+        }
+
+        if (!validateJurisdiction(jurisdiction)) {
+            showToast("Seleccioná una jurisdicción válida.", "error");
+            return;
+        }
+
+        if (!validateMessage(message)) {
+            showToast("El mensaje debe tener mínimo 10 caracteres.", "error");
+            return;
+        }
+
+        // Enviar datos
+        try {
+            const res = await fetch("/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, jurisdiction, message })
+            });
+
+            const json = await res.json();
+
+            if (res.ok) {
+                showToast("Consulta enviada. ¡Gracias por contactarnos!");
+                form.reset();
+            } else {
+                console.error(json);
+                showToast("Error al enviar la consulta.", "error");
+            }
+        } catch (err) {
+            console.error(err);
+            showToast("Error de conexión.", "error");
+        }
+    });
+});
+
+
+/* =========================================
+    Animaciones
+========================================= */
+
+const animatedElements = document.querySelectorAll('.reveal');
 
 if (animatedElements.length > 0) {
-
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -81,19 +172,11 @@ if (animatedElements.length > 0) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Inicializamos estilos iniciales
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
+    animatedElements.forEach(el => observer.observe(el));
 }
-
-

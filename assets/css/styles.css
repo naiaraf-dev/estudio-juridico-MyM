@@ -31,6 +31,17 @@ h6 {
     font-weight: 600;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ================= NAVBAR ================= */
 .navbar {
     background-color: var(--primary-color) !important;
@@ -85,7 +96,7 @@ h6 {
 /* ================= HERO ================= */
 .hero {
     background:
-        url("/assets/img/trabajando3-collage.jpg") center / cover;
+        url("/assets/img/law-firm5.jpg") center / cover no-repeat;
     height: 55vh;
     display: flex;
     align-items: center;
@@ -99,7 +110,9 @@ h6 {
 .hero h1 {
     font-size: 2.6rem;
     font-weight: bold;
+    font-family: sans-serif !important
 }
+
 .hero p {
     font-size: 1.1rem;
 }
@@ -234,9 +247,15 @@ h6 {
 }
 
 .service-icon {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #404040;
-    margin-bottom: 1.2rem;
+}
+
+.service-icon img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .service-title {
@@ -289,6 +308,10 @@ h6 {
 .ig-link {
     text-decoration: none;
     color: var(--primary-color);
+}
+
+.ig-link:hover {
+    color: var(--accent-color);
 }
 
 .whatsapp-btn {
@@ -399,7 +422,7 @@ h6 {
 .footer-links a {
     color: var(--text-light);
     opacity: 0.85;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .footer-links a:hover {
@@ -482,6 +505,36 @@ h6 {
 #btn-back-to-top.show {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* ================= TOAST ================= */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    background: #587997;
+    color: white;
+    padding: 12px 18px;
+    margin-top: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast.error {
+    background: #c0392b;
+    color: white;
 }
 
 /* ================= RESPONSIVE ================= */
