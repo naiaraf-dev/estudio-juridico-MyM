@@ -26,17 +26,34 @@
                 <img src="/assets/img/mm_logo2.png" alt="M&M Estudio Jurídico" class="nav-logo">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- HAMBURGUESA: solo mobile + tablet -->
+            <button class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html">Profesionales</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./services.html">Áreas de Práctica</a></li>
                     <li class="nav-item">
-                        <a class="nav-link btn-nav-highlight" href="../index.html#contact">Solicitar Consulta</a>
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profesionales">Profesionales</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/areas-de-practica">
+                            Áreas de Práctica
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav-highlight" href="/#contact">
+                            Solicitar Consulta
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -58,14 +75,14 @@
             <!-- Dra. Montoya -->
             <div class="row mb-5 align-items-center reveal">
                 <div class="col-lg-5 text-center mb-4 mb-lg-0">
-                    <img src="https://placeholder.svg?height=400&width=400&query=professional_woman_lawyer_montoya" alt="Dra. Florencia Montoya" class="profile-image">
+                    <img src="/assets/img/dra.montoya.jpeg" alt="Dra. Florencia Montoya" class="profile-image">
                 </div>
                 <div class="col-lg-7">
                     <h2 class="lawyer-detail-title">Dra. Florencia Montoya</h2>
                     <!-- <p class="lawyer-jurisdiction"><i class="fas fa-map-marker-alt"></i> Especialista en Provincia de Buenos Aires</p> -->
                     
                     <div class="lawyer-detail-content">
-                        <p class="lead">Profesional dedicada a la resolución ágil y efectiva de conflictos en el ámbito jurídico bonaerense. Con más de 10 años de experiencia en el sector legal, la Dra. Montoya se ha especializado en ofrecer asesoramiento integral y soluciones prácticas a sus clientes.</p>
+                        <p class="lead">Abogada comprometida, responsable y orientada a brindar soluciones jurídicas eficaces. Me caracterizo por la ética profesional, la dedicación a cada caso y el acompañamiento cercano a mis clientes.</p>
 
                         <!-- <h4 class="mt-4">Especialidades</h4>
                         <ul class="specialty-list">
@@ -84,21 +101,27 @@
                             </span>
                         </div>
 
-                        <div class="contact-row">
-                            <a href="https://wa.me/5491131840620" target="_blank" class="btn btn-whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <span class="badge-item-in">
-                                <a href="https://www.linkedin.com/in/florencia-montoya" target="_blank" title="LinkedIn Montoya">
-                                    <i class="fab fa-linkedin"></i> Montoya
+                        <div class="contact-row1">
+                            <!-- Fila botones -->
+                            <div class="contact-actions">
+                                <a href="https://wa.me/5491131840620" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
                                 </a>
-                            </span>
-                        </div>
 
-                        <div class="email-row">
-                            <span class="btn-email">
-                                <i class="fas fa-envelope"></i> Email: montoyamoralesabogadas@gmail.com
-                            </span>
+                                <a href="https://www.instagram.com/estudiojuridicomontoyamorales" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+
+                                <a href="https://www.facebook.com/profile.php?id=61587313506964" target="_blank" rel="noopener noreferrer" class="btn btn-facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </div>
+
+                            <div class="email-row">
+                                <span class="btn-email">
+                                    <i class="fas fa-envelope"></i> Email: montoyamoralesabogadas@gmail.com
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,7 +136,7 @@
                     <!-- <p class="lawyer-jurisdiction"><i class="fas fa-map-marker-alt"></i> Especialista en Ciudad Autónoma de Buenos Aires</p> -->
                     
                     <div class="lawyer-detail-content">
-                        <p class="lead">Profesional dedicada a ofrecer soluciones jurídicas prácticas y eficientes en la Ciudad Autónoma de Buenos Aires. Su trayectoria se destaca por su compromiso con la calidad del servicio y la defensa rigurosa de los derechos de sus clientes.</p>
+                        <p class="lead">Profesional dedicada a ofrecer soluciones jurídicas prácticas y eficientes en la Ciudad Autónoma de Buenos Aires. Me destaco por mi compromiso con la calidad del servicio y la defensa rigurosa de los derechos de mis clientes.</p>
 
                         <!-- <h4 class="mt-4">Especialidades</h4>
                         <ul class="specialty-list">
@@ -133,14 +156,19 @@
                         </div>
 
                         <div class="contact-row">
-                            <a href="https://wa.me/5491131840620" target="_blank" class="btn btn-whatsapp">
+                            <a href="https://wa.me/5491154877223" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
-                            <span class="badge-item-in">
-                                <a href="https://www.linkedin.com/in/celeste-morales" target="_blank" title="LinkedIn Montoya">
-                                    <i class="fab fa-linkedin"></i> Morales
-                                </a>
-                            </span>
+                            
+                            <a href="https://www.instagram.com/estudiojuridicomontoyamorales" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.facebook.com/profile.php?id=61587313506964" target="_blank" rel="noopener noreferrer" class="btn btn-facebook"><i class="fab fa-facebook"></i></a>
+                            
+                            <a href="https://www.linkedin.com/in/celeste-morales-90a006310/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
                         </div>
 
                         <div class="email-row">
@@ -169,7 +197,7 @@
                         <div class="value-card">
                             <div class="value-icon"><i class="fas fa-handshake"></i></div>
                             <h4>Profesionalismo</h4>
-                            <p>Comprometidas con la excelencia y la ética en cada caso, ofreciendo el mejor servicio legal.</p>
+                            <p>Desempeñamos nuestra función profesional con responsabilidad, ética y compromiso.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -229,9 +257,9 @@
                         <div>
                             <h5>Enlaces útiles</h5>
                             <ul class="list-unstyled">
-                                <li><a href="./index.html">Inicio</a></li>
-                                <li><a href="#about">Quiénes Somos</a></li>
-                                <li><a href="#services">Áreas de Práctica</a></li>
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/profesionales">Profesionales</a></li>
+                                <li><a href="/areas-de-practica">Áreas de Práctica</a></li>
                             </ul>
                         </div>
 
@@ -240,18 +268,18 @@
                             <h5>Síguenos</h5>
                             <div class="footer-social-vertical">
 
-                                <!-- <a href="https://www.facebook.com/estudiojuridicomontoyamorales" 
-                                target="_blank" title="Facebook">
-                                    <i class="fab fa-facebook"></i> Estudio Jurídico M&M
-                                </a> -->
+                                <a href="https://www.facebook.com/profile.php?id=61587313506964" 
+                                target="_blank" rel="noopener noreferrer" title="Facebook">
+                                    <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
+                                </a>
 
                                 <a href="https://www.instagram.com/estudiojuridicomontoyamorales"
-                                target="_blank" title="Instagram">
-                                    <i class="fab fa-instagram"></i> Instagram
+                                target="_blank" rel="noopener noreferrer" title="Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
                                 </a>
 
                                 <a href="mailto:montoyamoralesabogadas@gmail.com" title="Email">
-                                    <i class="fas fa-envelope"></i> Email
+                                    <i class="fas fa-envelope" aria-hidden="true"></i> Email
                                 </a>
 
                             </div>
@@ -274,6 +302,13 @@
                 </p>
             </div>
 
+            <!-- Firma desarrollador -->
+            <div class="dev-signature">
+                <span>Hecho por</span>
+                <a href="https://github.com/naiaraf-dev" target="_blank" aria-label="GitHub del desarrollador">
+                    <i class="fab fa-github"></i> naiaraf-dev
+                </a>
+            </div>
         </div>
     </footer>
 
@@ -286,5 +321,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/script.js"></script>
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <!-- DIVISOR -->
+        <hr class="offcanvas-divider">
+
+        <div class="offcanvas-body">
+            <ul class="mobile-menu list-unstyled">
+                <li><a href="/">Inicio</a></li>
+                <li class="active"><a href="/profesionales">Profesionales</a></li>
+                <li><a href="/areas-de-practica">Áreas de Práctica</a></li>
+                <li class="mt-3">
+                    <a href="/#contact" class="btn-contact">
+                        Solicitar Consulta
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
