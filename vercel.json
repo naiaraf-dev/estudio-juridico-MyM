@@ -4,6 +4,14 @@
         {
         "src": "api/**/*.js",
         "use": "@vercel/node"
+        },
+        {
+        "src": "**/*.html",
+        "use": "@vercel/static"
+        },
+        {
+        "src": "assets/**",
+        "use": "@vercel/static"
         }
     ],
     "routes": [
@@ -12,16 +20,16 @@
         "dest": "/api/$1"
         },
         {
-        "src": "/",
-        "dest": "/index.html"
-        },
-        {
         "src": "/profesionales",
         "dest": "/profesionales/index.html"
         },
         {
         "src": "/areas-de-practica",
         "dest": "/areas-de-practica/index.html"
+        },
+        {
+        "src": "/",
+        "dest": "/index.html"
         },
         {
         "src": "/(.*)",
