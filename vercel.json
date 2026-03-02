@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "builds": [
+        {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+        },
+        {
+        "src": "/",
+        "dest": "/index.html"
+        },
+        {
+        "src": "/profesionales",
+        "dest": "/profesionales/index.html"
+        },
+        {
+        "src": "/areas-de-practica",
+        "dest": "/areas-de-practica/index.html"
+        },
+        {
+        "src": "/(.*)",
+        "dest": "/$1"
+        }
+    ]
+}
