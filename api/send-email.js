@@ -60,7 +60,7 @@ function adminTemplate({ name, email, jurisdiction, area, message }) {
             <!-- HEADER -->
             <tr>
                 <td style="background:linear-gradient(135deg,#3d607a 0%,#587997 100%);padding:32px 40px;text-align:center;">
-                <img src="https://estudio-juridico-mym.vercel.app/assets/img/mm_logo.png"
+                <img src="https://res.cloudinary.com/dcrxap2ua/image/upload/v1772497329/mm_logo2_dmdmlh.png"
                     alt="Estudio Jurídico M&amp;M"
                     style="max-width:160px;height:auto;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;">
                 <h1 style="color:#ffffff;font-size:20px;margin:0;font-weight:600;letter-spacing:0.5px;">
@@ -174,7 +174,7 @@ function userTemplate({ name, email, jurisdiction, area, message }) {
             <!-- HEADER -->
             <tr>
                 <td style="background:linear-gradient(135deg,#3d607a 0%,#587997 100%);padding:32px 40px;text-align:center;">
-                <img src="https://estudio-juridico-mym.vercel.app/assets/img/mm_logo.png"
+                <img src="https://res.cloudinary.com/dcrxap2ua/image/upload/v1772497329/mm_logo2_dmdmlh.png"
                     alt="Estudio Jurídico M&amp;M"
                     style="max-width:160px;height:auto;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;">
                 <h1 style="color:#ffffff;font-size:20px;margin:0;font-weight:600;letter-spacing:0.5px;">

@@ -90,6 +90,11 @@ function validateJurisdiction(j) {
     return j === "caba" || j === "pba";
 }
 
+function validateArea(area) {
+    const valid = ["dont_know", "derecho_familia", "contratos", "sucesiones", "derecho_penal", "derechos_reales", "derecho_consumidor"];
+    return valid.includes(area);
+}
+
 function validateMessage(msg) {
     return msg.trim().length >= 10;
 }
@@ -109,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = form.name.value.trim();
         const email = form.email.value.trim();
         const jurisdiction = form.jurisdiction.value.trim();
+        const area = form.area.value.trim();
         const message = form.message.value.trim();
 
         // VALIDACIONES
@@ -127,6 +133,11 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        if (!validateArea(area)) {
+            showToast("Seleccioná un área válida.", "error");
+            return;
+        }
+
         if (!validateMessage(message)) {
             showToast("El mensaje debe tener mínimo 10 caracteres.", "error");
             return;
@@ -137,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const res = await fetch("/api/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, email, jurisdiction, message })
+                body: JSON.stringify({ name, email, jurisdiction, area, message })
             });
 
             const json = await res.json();
