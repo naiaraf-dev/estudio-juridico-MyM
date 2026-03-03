@@ -59,7 +59,7 @@ function adminTemplate({ name, email, jurisdiction, area, message }) {
 
             <!-- HEADER -->
             <tr>
-                <td style="background:linear-gradient(135deg,#3d607a 0%,#587997 100%);padding:32px 40px;text-align:center;">
+                <td style="background:#587997;padding:32px 40px;text-align:center;">
                 <img src="https://res.cloudinary.com/dcrxap2ua/image/upload/v1772497329/mm_logo2_dmdmlh.png"
                     alt="Estudio Jurídico M&amp;M"
                     style="max-width:160px;height:auto;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;">
@@ -125,7 +125,7 @@ function adminTemplate({ name, email, jurisdiction, area, message }) {
 
             <!-- FOOTER -->
             <tr>
-                <td style="background:#3d607a;padding:18px 40px;text-align:center;">
+                <td style="background:#587997;padding:18px 40px;text-align:center;">
                 <p style="margin:0;color:rgba(255,255,255,0.65);font-size:11px;">
                     © 2024 Estudio Jurídico M&amp;M — Todos los derechos reservados.<br>
                     Este mensaje fue generado automáticamente desde el formulario de contacto del sitio web.
@@ -173,7 +173,7 @@ function userTemplate({ name, email, jurisdiction, area, message }) {
 
             <!-- HEADER -->
             <tr>
-                <td style="background:linear-gradient(135deg,#3d607a 0%,#587997 100%);padding:32px 40px;text-align:center;">
+                <td style="background:#587997;padding:32px 40px;text-align:center;">
                 <img src="https://res.cloudinary.com/dcrxap2ua/image/upload/v1772497329/mm_logo2_dmdmlh.png"
                     alt="Estudio Jurídico M&amp;M"
                     style="max-width:160px;height:auto;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;">
@@ -248,7 +248,7 @@ function userTemplate({ name, email, jurisdiction, area, message }) {
 
             <!-- FOOTER -->
             <tr>
-                <td style="background:#3d607a;padding:22px 40px;text-align:center;">
+                <td style="background:#587997;padding:22px 40px;text-align:center;">
                 <p style="margin:0 0 8px;color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">
                     Estudio Jurídico M&amp;M
                 </p>
