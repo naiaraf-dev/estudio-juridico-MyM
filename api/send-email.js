@@ -207,9 +207,6 @@ function userTemplate({ name, email, jurisdiction, area, message }) {
                     Hemos recibido tu consulta y nos pondremos en contacto con vos a la brevedad
                     para darte la asistencia que necesitás.
                 </p>
-                <p style="font-size:15px;color:#444;line-height:1.7;margin:0 0 28px;">
-                    Si necesitás agregar información adicional, podés responder este correo directamente.
-                </p>
 
                 <!-- Resumen -->
                 <p style="margin:0 0 12px;font-size:11px;font-weight:700;text-transform:uppercase;
@@ -337,6 +334,7 @@ export default async function handler(req, res) {
         await resend.emails.send({
         from:    `${FROM_NAME} <${FROM_EMAIL}>`,
         to:      [MAIL_TO],
+        reply_to: s.email,
         subject: `Nueva consulta web — ${s.name} (${s.jurisdiction.toUpperCase()})`,
         html:    adminTemplate(s),
         });
