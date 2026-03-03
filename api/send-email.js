@@ -240,9 +240,9 @@ function userTemplate({ name, email, jurisdiction, area, message }) {
                 <div style="margin-top:30px;background:#f7f9fc;border-radius:8px;padding:20px 24px;
                             border:1px solid #e3eaf1;text-align:center;">
                     <p style="margin:0 0 6px;font-size:13px;color:#666;">¿Necesitás contactarnos directamente?</p>
-                    <a href="mailto:mymabogadas@gmail.com"
+                    <a href="mailto:montoyamoralesabogadas@gmail.com"
                     style="color:#587997;font-size:14px;font-weight:600;text-decoration:none;">
-                    📧 mymabogadas@gmail.com
+                    📧 montoyamoralesabogadas@gmail.com
                     </a>
                 </div>
 
